@@ -16,22 +16,33 @@
     overflow-x:hidden ;
 }
 
+p{
+    width:100%;
+    text-align:centeR;
+    color:white;
+    font-size: 2em;
+    background:rgba(0,0,0,0.9);
+    border-radius:20px;
+
+}
+
 #countdown{
     font-size:2em;
     position:relative;
-    top:90%;
+    top:50%;
     left:50%;
     transform:translate(-50%,-50%);
-    height:50vh;
-    width:50vw;
+    height:80vh;
+    width:80vw;
     font-family: 'Roboto', sans-serif;
     background:rgba(0,0,0,0.9);
     color:white;
-    display:flex;
     justify-content:center;
     align-items:center;
     border-radius:20px;
-
+    display:flex;
+    justify-content:center;
+    align-items:center;
   }
 
 
@@ -49,7 +60,12 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     
-    <div id="countdown"></div>
+    <p>Sorpresa de viernes 13 para los de once en ccc </p>
+    <div id="countdown">
+
+    </div>
+
+
     <script>
         function conseguirHora(){
     var hoy = new Date();
@@ -67,8 +83,7 @@
     console.log(secondsToString(c)[1]);
     
     
-            document.getElementById('countdown').innerHTML = '<i class="fas fa-stopwatch"></i> '+ secondsToString(c)[0] + " horas " + secondsToString(c)[1] + ' minutos y ';
-          document.getElementById('countdown').innerHTML += secondsToString(c)[2] + ' segundos';
+            document.getElementById('countdown').innerHTML = '<p>'+ secondsToString(c)[0] + " horas " + secondsToString(c)[1] + ' minutos y ' + secondsToString(c)[2] + ' segundos' + "</p>";
             console.log(secondsToString(c)[0]);
     
   }
