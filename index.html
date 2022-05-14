@@ -1,126 +1,1131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404</title>
-    <style>
-        body{
-    width:100%;
-    height:100%;
-    display:grid;
-    align-items:center;
-    justify-content:center;
-    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/002/229/279/original/hacker-style-green-matrix-numerals-abstract-background-free-video.jpg);
-    overflow-x:hidden ;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Web designer and front-end developer">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,400,600' rel='stylesheet' type='text/css'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
+<title>Document</title>
+  <style>
+  
+/* general styles */
+
+body {
+  background: black;
+  font-family: "Raleway", sans-serif !important;
 }
 
-p{
-    width:100%;
-    text-align:centeR;
-    color:white;
-    font-size: 2em;
-    background:rgba(0,0,0,0.9);
-    border-radius:20px;
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+h1 {
+  background: url('https://i.pinimg.com/originals/84/b1/94/84b1947dc3388092aca2f8143de23567.gif');
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.h1molesto {
+  font-size: 10rem;
+}
+
+p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.section {
+  text-align: center;
+}
+
+.skillbar {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.display {
+  display: block;
+}
+
+/* flash alert styles */
+
+.flash-container {
+  width: 100%;
+  position: fixed;
+  z-index: 700;
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+.alert {
+  text-align: center !important;
+  width: 500px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  color: #211809 !important;
+}
+
+/* Nav Screen */
+
+.nav-screen {
+  height: 100%;
+  z-index: 500;
+  position: fixed;
+  background-color: #000;
+  opacity: 1;
+  right: -285px; /* start off behind the scenes */
+  -webkit-font-smoothing: antialiased;
+  position: fixed;
+  width: 285px;
+}
+
+.nav-screen .active {
+  display: block;
+}
+
+/* nav header links */
+
+.nav-brand {
+  position: fixed;
+  left: 0;
+  z-index: 600;
+  padding: 10px;
+}
+
+.nav-brand img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.fa-bars {
+  display: none !important;
+  color: #ff6363;
+  float: right;
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  z-index: 500;
+  cursor: pointer;
+}
+
+.fa-times {
+  color: #ff6363;
+  float: right;
+  padding: 20px;
+  right: 0;
+  z-index: 600;
+  cursor: pointer;
+}
+
+.header-links {
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+}
+
+.header-links li {
+  color: white;
+  display: inline;
+  float: right;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.header-links a {
+  color: #757575;
+  -webkit-transition: all 0.2s ease-in;
+}
+
+.header-links a:hover {
+  color: #ff6363 !important;
+}
+
+/* slide out nav menu styles */
+
+.nav-container {
+  padding-top: 10%;
+}
+
+.nav-links {
+  width: 250px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-links ul {
+  margin-top: 15%;
+  text-align: center;
+  padding-top: 10%;
+}
+
+.nav-links a {
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 2.5;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-links a:hover {
+  color: #ff6363;
+  -webkit-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+#fp-nav ul li .fp-tooltip {
+  color: #5f5f5f !important;
+}
+
+/* Expanding border effect */
+
+.header-links a::after {
+  display: block;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  content: "";
+  opacity: 0;
+  -webkit-transition: width 0.6s, opacity 0.8s;
+  -moz-transition: width 0.6s, opacity 0.8s;
+  transition: width 0.6s, opacity 0.8s;
+}
+
+.header-links a:hover::after,
+.header-links a:focus::after {
+  opacity: 1;
+  width: 100%;
+}
+
+/* main header section */
+
+.opaque-bg {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 380px;
+  padding: 1px 1px 5px 5px;
+}
+
+.aboutme{
+  background: url("https://s3-us-west-2.amazonaws.com/files.bradengelhardt.com/brad-bg-main.jpg")
+    no-repeat;
+  background-size: cover;
+}
+
+
+.aboutme p {
+  color: white;
+  font-weight: 100;
+  font-size: 17.4px;
+}
+
+/* bouncing arrow */
+
+.fa-chevron-down {
+  color: #ff6363 !important;
+  bottom: 10px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: 1.2s ease;
+}
+
+/* Scroll down indicator (bouncing) */
+
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateX(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+@-moz-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+.bounce {
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+/* about section */
+
+/* Skill bars */
+
+.container-skillbar {
+  width: 100%;
+  padding-top: 30px;
+  padding-right: 2%;
+  padding-left: 2%;
+  height: auto;
+  overflow: none;
+}
+.skillbar {
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  background: #efefef;
+  height: 30px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -ms-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  transition: 0.4s linear;
+  -webkit-transition-property: width, background-color;
+  -moz-transition-property: width, background-color;
+  -ms-transition-property: width, background-color;
+  -o-transition-property: width, background-color;
+  transition-property: width, background-color;
+}
+
+.skillbar-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110px;
+  font-weight: bold;
+  font-size: 13px;
+  color: #fff;
+  background: #6adcfa;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.skillbar-title span {
+  display: block;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0 20px;
+  height: 30px;
+  line-height: 30px;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.skillbar-bar {
+  height: 30px;
+  width: 0px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+.skill-bar-percent {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 11px;
+  height: 30px;
+  line-height: 30px;
+  color: #ffffff;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* portfolio section */
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+}
+
+.content-slide {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+}
+
+.content-slide img {
+  width: 70%;
+}
+
+.fp-controlArrow.fp-next {
+  border-color: transparent transparent transparent #ff6363 !important;
+  right: 45px;
+}
+
+.fp-controlArrow.fp-prev {
+  border-color: transparent #ff6363 transparent transparent !important;
+  left: 45px;
+}
+
+@media (min-width: 0px) and (max-width: 500px) {
+  .fp-controlArrow.fp-prev{
+  margin-top: 55%;
+  left: 35%;
+  }
+
+  .fp-controlArrow.fp-next{
+  margin-top: 55%;
+  right: 35%;
+  }
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: green !important;
+}
+
+/* contact us styles */
+
+.fa-paper-plane {
+  color: #484848;
+}
+
+/* paper plane shake on hover */
+
+.plane-animated {
+  animation-duration: 6s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+.fa-paper-plane:hover {
+  /* Toggle our animation play state to running when we are hovering over our sticker */
+  animation-play-state: running;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+.shake {
+  animation-name: shake;
+}
+
+/* input field styles */
+
+.contact-form {
+  padding: 0px 15px 0px 15px;
+}
+
+.form-control {
+  border: 2px solid rgba(0, 0, 0, 0.27);
+  width: 100%;
+  max-width: 100%;
+  height: 3em;
+  font-size: 16px;
+  padding: 1em;
+  margin: 0.5em 0 2em 0;
+  font-weight: bold;
+}
+
+textarea {
+  min-height: 10em;
+}
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+#submit {
+  outline: none;
+  padding: 12px;
+  min-width: 200px;
+  border-radius: 2px;
+  border: 2px solid #ff6363;
+  text-align: center;
+  font-size: 1em;
+  color: #ff6363;
+  background-color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#submit:hover {
+  background-color: #ff6363;
+  color: white;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+/* footer styles */
+
+.footer {
+  background-color: #484848;
+  height: 100px;
+  padding-top: 10px;
+}
+
+.footer p {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.social-links a {
+  color: white;
+  padding: 0px 5px 0px 5px;
+}
+
+.social-links a:hover {
+  color: #ff6363;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+/* smaller resolution styles */
+
+@media (min-width: 0px) and (max-width: 500px) {
+  .fa-bars {
+    display: block !important;
+  }
+
+.h1molesto {
+  padding: 10px
+}
+
+  .header-links {
+    display: none;
+  }
+}
+
+/* mobile styles */
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .content {
+    max-width: 300px;
+  }
+
+  .aboutme h1 {
+    font-size: 50px;
+  }
+}
+
+/* loading screen animation */
+
+.spinner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding: 25%;
+  background-color: #2f2f2f;
+  text-align: center;
+  font-size: 10px;
+  z-index: 1000;
+}
+
+.spinner > div {
+  background-color: #ff6363;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+
+@keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
+
+.blinking-cursor {
+  font-weight: 500;
+  margin-left: 4px;
+  font-size: 20px;
+  color: white !important;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-moz-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-o-keyframes "blink" {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+.success {
+  padding: 1em;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #468847;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.error {
+  padding: 1em;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #b94a48;
+  background-color: #f2dede;
+  border: 1px solid rgba(185, 74, 72, 0.3);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.wpyhc {
+  width: 30%;
+  border-radius: 20px;
+  z-index: 1000000000000;
+  cursor: pointer;
+}
+
+#mclovin {
+  width: 100%
 
 }
 
-#countdown{
-    font-size:2em;
-    position:relative;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    height:80vh;
-    width:80vw;
-    font-family: 'Roboto', sans-serif;
-    background:rgba(0,0,0,0.9);
-    color:white;
-    justify-content:center;
-    align-items:center;
-    border-radius:20px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-  }
-
-
-
-  
-  #countdown i{
-    font-size:1em;
-  }
-  
-  
-    </style>
+  </style>
 </head>
 <body>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    
-    <p>Sorpresa de viernes 13 para los de once en ccc </p>
-    <div id="countdown">
-
+  <!-- navbar header -->
+  <div class="nav-header">
+    <div class="nav-brand">
+      <img src="./1652372854168.jpg">
     </div>
+    <i class="fa fa-bars fa-3x"></i>
+    <div class="header-links"">
+      <ul>
+        <li data-menuanchor="fourthPage"><a href="#contact">CONTACTANOS</a></li>
+        <li data-menuanchor="thirdPage"><a href="#portfolio">SERVICIOS</a></li>
+        <li data-menuanchor="secondPage"><a href="#about">NOSOTROS</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- end navbar header -->
 
+  <!-- sidebar slider -->
+  <div class="nav-screen">
+    <i class="fa fa-times fa-3x"></i>
+    <div class="nav-container">
+      <div class="nav-links">
+        <ul id='myMenu'>
+          <li data-menuanchor="secondPage"><a href="#about">NOSOTROS</a></li>
+          <li data-menuanchor="thirdPage"><a href="#portfolio">SERVICIOS</a></li>
+          <li data-menuanchor="fourthPage"><a href="#contact">CONTACTANOS</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- end navbar slider -->
 
-    <script>
-        function conseguirHora(){
-    var hoy = new Date();
-    
-  
-    
-    var hora = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
-    
-    
-    var b = new Date("May 13, 2022 " + hora);
-    var a = new Date("May 13, 2022 19:00:0");
+  <!-- begin fullpage -->
 
-  //La diferencia se da en milisegundos así que debes dividir entre 1000
-    
-    
-  var c = ((a-b)/1000); 
-    console.log(secondsToString(c)[1]);
-    
-    
-            document.getElementById('countdown').innerHTML = '<p>' + secondsToString(c)[1] + ' minutos y ' + secondsToString(c)[2] + ' segundos' + "</p>";
-            console.log(secondsToString(c)[0]);
-    
-  }
-  
-  function secondsToString(seconds) {
-    var hour = Math.floor(seconds / 3600);
-    var minute = Math.floor((seconds / 60) % 60);
-    var second = seconds % 60;
-    return [hour,minute,second];
-  }
-  
-  setInterval(conseguirHora,1000);
-  
-  
-function holis() {
-    var final = new Date();
-    var hora = final.getHours();
-    var minutos = final.getMinutes();
-    var segundos = final.getSeconds();
+  <div id="fullpage">
 
-    
+    <!-- begin section -->
 
-    console.log(hora);
-    console.log(minutos);
-    console.log(segundos);
+    <div class="section aboutme" data-anchor="aboutme">
+      <div class=" animated fadeInDown">
+        <h1 class="h1molesto" style="color:white;">McLovers<span style="color:#FF6363"> / </span>MyWorks</h1>
+        <p><span id="holder"></span><span class="blinking-cursor">|</span></p>
+      </div>
+      <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
+    </div>
+    <!-- end section -->
 
+    <!-- begin section -->
 
+    <div class="section" data-anchor="skills">
+      <div class="content">
+        <h1 class="wow fadeInDown" data-wow-delay="0.2s">NOSOTROS</h1>
+        <p class="wow fadeInDown" data-wow-delay="0.2s">Hola, somos un grupo anónimo que ayuda en los momentos más dificiles. Especialmente si eres de once, en el CCC.</p>
+        <br>
+<h1>Especialidades</h1>
+        <div class=" wow fadeInUp container-skillbar" data-wow-delay="0.2s">
+          <div class="skillbar clearfix " data-percent="100%">
+            <div class="skillbar-title" style="background: #DD1E2F;"><span>Física</span></div>
+            <div class="skillbar-bar" style="background: #DD1E2F;"></div>
+            <div class="skill-bar-percent">100%</div>
+          </div> <!-- End Skill Bar -->
 
-    if(final.getHours() == 19 && final.getMinutes() == 00 && final.getSeconds() == 0){
-        document.body.style.display = "none";
+          <div class="skillbar clearfix " data-percent="100%">
+            <div class="skillbar-title" style="background: #EBB035;"><span>Química</span></div>
+            <div class="skillbar-bar" style="background: #EBB035;"></div>
+            <div class="skill-bar-percent">100%</div>
+          </div> <!-- End Skill Bar -->
+
+          <div class="skillbar clearfix " data-percent="100%">
+            <div class="skillbar-title" style="background: #218559;"><span>Matemáticas</span></div>
+            <div class="skillbar-bar" style="background: #218559;"></div>
+            <div class="skill-bar-percent">100%</div>
+          </div> <!-- End Skill Bar -->
+
+          <div class="skillbar clearfix " data-percent="100%">
+            <div class="skillbar-title" style="background: #6840D4;"><span>Tecnología</span></div>
+            <div class="skillbar-bar" style="background: #6840D4;"></div>
+            <div class="skill-bar-percent">100%</div>
+          </div> <!-- End Skill Bar -->
+
+          <div class="skillbar clearfix " data-percent="90%">
+            <div class="skillbar-title" style="background: #06A2CB;"><span>Biología</span></div>
+            <div class="skillbar-bar" style="background: #06A2CB;"></div>
+            <div class="skill-bar-percent">90%</div>
+          </div> <!-- End Skill Bar -->
+
+          <div class="skillbar clearfix " data-percent="80%">
+            <div class="skillbar-title" style="background: #AB4DD2;"><span>Humanidades</span></div>
+            <div class="skillbar-bar" style="background: #AB4DD2;"></div>
+            <div class="skill-bar-percent">80%</div>
+          </div> <!-- End Skill Bar -->
+        </div>
+      </div>
+    </div>
+    <!-- end section -->
+
+    <!-- begin section -->
+
+    <div class="section" data-anchor="projects">
+      <div class="content-slide">
+        <div class="slide">
+          <h1 class="wow fadeInDown" data-wow-delay="0.2s">EVALUACIONES</h1>
+          <p class="wow fadeInDown" data-wow-delay="0.2s">Consigue las respuestas a unos clicks de distancia.</p>
+          <img class="wow fadeInUp" data-wow-delay="0.2s" data-src="./fotoa.jpg">
+        </div>
+        <div class="slide">
+          <h1>TALLERES</h1>
+          <p>¿Para qué perder tanto tiempo en hacer largos talleres?, cuando puedes pedirlos.</p>
+          <img data-src="./fotob.jpg">
+        </div>
+        <div class="slide">
+          <h1>TAREAS</h1>
+          <p>¿Atrasado en tareas?, no en nuestra guardia.</p>
+          <img data-src="./fotoc.jpg">
+        </div>
+        <div class="slide">
+          <h1>PROGRAMAS</h1>
+          <p>¿No sabes programar?, chill bro, we got ya.</p>
+          <img data-src="./fotod.jpg">
+        </div>
+        <div class="slide">
+          <h1>ADRENALINA</h1>
+          <p>Si necesitas adrenalina, un despertador instantáneo, solo contactanos.</p>
+          <img data-src="./fotoe.jpg">
+        </div>
+        <div class="slide">
+          <h1>ANONYMUS</h1>
+          <p>Con nosotros te sientes espia ruso, y nosotros Robin Hood.</p>
+          <img data-src="./robin.webp">
+        </div>
+      </div>
+    </div>
+    <!-- end section -->
+
+    <!-- begin section -->
+
+    <div class="section" data-anchor="contact">
+      <div class="content wow fadeInDown" data-wow-delay="0.2s">
+        <h1>CONTACTANOS</h1>
+        <p>1) Clickea sobre el logo de whatsapp ⬇️, envianos un "." y espera nuestra respuesta.
+          <br><br>
+          2) Cuando respondamos, dirigete a la sala de hack chat ⬇️.
+    <br> <br>     
+          3) Espera a que nos conectemos y te saludemos, posteriormente comentanos tu trabajo.</p>
+        <br><br>
+        <a href="https://wa.me/16603686201"><img class="wpyhc" src="./wp.webp"></a>
+        <a href="https://hack.chat/?Allgemeines"><img class="wpyhc" src="./hc.png" alt=""></a>
+            <br><br>
+        </div>
+      </div>
+    </div>
+    <!-- end section -->
+
+    <!-- begin section -->
+
+    <div class="section fp-auto-height">
+      <div class="footer">
+        <p>-CREADORES- <br><br> Amantes de McLovin</p>
+        <img id="mclovin" src="./mclovin.jpg" alt="">
+        </div>
+      </div>
+    <!-- end section -->
+
+  </div>
+  <!-- end fullpage -->
+  <script>
+
+  $(document).ready(function () {
+  // typing animation
+  (function ($) {
+    $.fn.writeText = function (content) {
+      var contentArray = content.split(""),
+        current = 0,
+        elem = this;
+      setInterval(function () {
+        if (current < contentArray.length) {
+          elem.text(elem.text() + contentArray[current++]);
+        }
+      }, 80);
+    };
+  })(jQuery);
+
+  // input text for typing animation
+  $("#holder").writeText("AYUDANTES + PROGRAMADORES + VISIONARIOS");
+
+  // initialize wow.js
+  new WOW().init();
+
+  // Push the body and the nav over by 285px over
+  var main = function () {
+    $(".fa-bars").click(function () {
+      $(".nav-screen").animate(
+        {
+          right: "0px"
+        },
+        200
+      );
+
+      $("body").animate(
+        {
+          right: "285px"
+        },
+        200
+      );
+    });
+
+    // Then push them back */
+    $(".fa-times").click(function () {
+      $(".nav-screen").animate(
+        {
+          right: "-285px"
+        },
+        200
+      );
+
+      $("body").animate(
+        {
+          right: "0px"
+        },
+        200
+      );
+    });
+
+    $(".nav-links a").click(function () {
+      $(".nav-screen").animate(
+        {
+          right: "-285px"
+        },
+        500
+      );
+
+      $("body").animate(
+        {
+          right: "0px"
+        },
+        500
+      );
+    });
+  };
+
+  $(document).ready(main);
+
+  // initiate full page scroll
+
+  $("#fullpage").fullpage({
+    scrollBar: true,
+    responsiveWidth: 400,
+    navigation: true,
+    navigationTooltips: ["Inicio", "Nosotros", "Servicios", "Contáctanos", "Creadores"],
+    anchors: ["home", "about", "portfolio", "contact", "connect"],
+    menu: "#myMenu",
+    fitToSection: false,
+
+    afterLoad: function (anchorLink, index) {
+      var loadedSection = $(this);
+
+      //using index
+      if (index == 1) {
+        /* add opacity to arrow */
+        $(".fa-chevron-down").each(function () {
+          $(this).css("opacity", "1");
+        });
+        $(".header-links a").each(function () {
+          $(this).css("color", "lightgreen");
+        });
+        $(".header-links").css("background-color", "transparent");
+      } else if (index != 1) {
+        $(".header-links a").each(function () {
+          $(this).css("color", "lightgreen");
+        });
+        $(".header-links").css("background-color", "black");
+      }
+
+      //using index
+      if (index == 2) {
+        /* animate skill bars */
+        $(".skillbar").each(function () {
+          $(this)
+            .find(".skillbar-bar")
+            .animate(
+              {
+                width: $(this).attr("data-percent")
+              },
+              2500
+            );
+        });
+      }
     }
-}
+  });
 
-setInterval(holis,1000);
-  
-    </script>
+  // move section down one
+  $(document).on("click", "#moveDown", function () {
+    $.fn.fullpage.moveSectionDown();
+  });
+
+  // fullpage.js link navigation
+  $(document).on("click", "#skills", function () {
+    $.fn.fullpage.moveTo(2);
+  });
+
+  $(document).on("click", "#projects", function () {
+    $.fn.fullpage.moveTo(3);
+  });
+
+  $(document).on("click", "#contact", function () {
+    $.fn.fullpage.moveTo(4);
+  });
+
+  // smooth scrolling
+  $(function () {
+    $("a[href*=#]:not([href=#])").click(function () {
+      if (
+        location.pathname.replace(/^\//, "") ==
+          this.pathname.replace(/^\//, "") &&
+        location.hostname == this.hostname
+      ) {
+        var target = $(this.hash);
+        target = target.length
+          ? target
+          : $("[name=" + this.hash.slice(1) + "]");
+        if (target.length) {
+          $("html,body").animate(
+            {
+              scrollTop: target.offset().top
+            },
+            700
+          );
+          return false;
+        }
+      }
+    });
+  });
+
+ 
+});
+</script>
+
+ <!-- ( ͡◉ ᴗ ͡◉)✌-->
+ <!-- 
+ ────────────────████
+───────────────█░░███
+───────────────█░░████
+────────────────███▒██─────████████
+──────████████─────█▒█──████▒▒▒▒▒▒████
+────███▒▒▒▒▒▒████████████░░████▒▒▒▒▒███
+──██▒▒▒▒░▒▒████░░██░░░░██░░░░░█▒▒▒▒▒▒▒███
+─██▒▒░░░░▒██░░░░░█▒░░░░░██▒░░░░░░░▒▒▒▒▒▒█
+██▒░░░░░▒░░░░░░░░░▒░░░░░░░▒▒░░░░░░░▒▒▒▒▒██
+█░░░░░░▒░░░██░░░░░░░░░░░░░██░░░░░░░░▒▒▒▒▒█
+█░░░░░░░░█▒▒███░░░░░░░░░█▒▒███░░░░░░░▒▒▒▒█
+█░░░░░░░████████░░░░░░░████████░░░░░░▒▒▒▒█
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒█
+██░░░█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█░▒▒▒▒█
+─█░░░░██░█░░░░░░░░░░░░░░░░░░░░░░░███▒▒▒▒▒█
+─█▒▒░░░░█████░░░█░░░░██░░░██░░████░▒▒▒▒▒▒█
+─██▒▒░░░░░█████████████████████░░░▒▒▒▒▒▒██
+──██▒▒▒▒░░░░░██░░░███░░░██░░░█░░░▒▒▒▒▒▒██
+───███▒▒▒░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒█████
+─────███▒▒▒▒▒▒░░░░░░░░░░░░░▒▒▒▒▒▒████
+────────██████████████████████████
+-->
 </body>
 </html>
